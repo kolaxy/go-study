@@ -1,9 +1,15 @@
 package main
+
 import "fmt"
 
+// !() - nogic NOT
+// && () - logic  AND
+// || () - logic OR
+
 func main() {
-	var a int = 8
-	var b int = 3
-	var c bool = a > b
-	fmt.Println(c)
+	a := 6
+	b := 7
+	if a < b {
+		fmt.Println("A is less than B")
+	}
 }
