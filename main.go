@@ -2,12 +2,16 @@ package main
 import "fmt"
 
 func main() {
-	var n, d, c int
-	fmt.Scan(&n, &c, &d)
-	for i := 1; i <= n; i++ {
-		if (i % c == 0) && (i % d != 0) {
-			fmt.Println(i)
+	temp := 0
+	for i := 0; i <= 1; {
+		fmt.Scan(&temp)
+		if temp < 10 {
+			continue
+		} else if temp > 100 {
 			break
+		} else {
+			fmt.Println(temp)
 		}
+
 	}
 }
