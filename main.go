@@ -2,19 +2,12 @@ package main
 import "fmt"
 
 func main() {
-	maxelement := 0
-	counter := 0
-	for i := 0; i <= 1; {
-		var put int
-		fmt.Scan(&put)
-		if put == 0 {
+	var n, d, c int
+	fmt.Scan(&n, &c, &d)
+	for i := 1; i <= n; i++ {
+		if (i % c == 0) && (i % d != 0) {
+			fmt.Println(i)
 			break
-		} else if put == maxelement {
-			counter++
-		} else if put > maxelement {
-			counter=1
-			maxelement = put
 		}
 	}
-	fmt.Println(counter)
 }
