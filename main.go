@@ -2,7 +2,13 @@ package main
 import "fmt"
 
 func main() {
-	for i := 1 ; i <= 10 ; i++ {
-		fmt.Println(i * i)
+	var num1 int
+	var num2 int
+	sum := 0
+	fmt.Scan(&num1, &num2)
+
+	for i := num1; i <= num2; i ++ {
+		sum += i
 	}
+	fmt.Println(sum)
 }
