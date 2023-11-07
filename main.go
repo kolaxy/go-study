@@ -2,18 +2,12 @@ package main
 import "fmt"
 
 func main() {
-	var x, p, y int
-	years := 0
-	// x - start point
-	// p - percentage point
-	// y - finish point
-	fmt.Scan(&x, &p, &y)
-	for i := 0; i <= 1; {
-		x = int(x + (x * p / 100))
-		years++
-		if x > y {
-			fmt.Println(years)
-			break
-		}
-	}
+	var a float64 = 100.123456
+	fmt.Printf("This number %f type %T", a, a)
+	var a1 byte = 's'
+	var a2 int = 1234
+	fmt.Printf("%q %b", a1, a2)
+	var b1 string = "123"
+	var b2 string = "1234"
+	fmt.Printf("%q \n%s", b1, b2)
 }
