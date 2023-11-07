@@ -2,10 +2,12 @@ package main
 import "fmt"
 
 func main() {
-	a := [3]int{1, 2, 3}
-	b := [3]int{1, 2, 3}
-	c := [3]int{3, 2, 1}
+	var numbers [5]int = [5]int{1, 2, 3, 4, 5}
 
-	fmt.Println(a == b) // true
-	fmt.Println(a == c) // false
+	fmt.Println(numbers[0]) // 1
+	fmt.Println(numbers[4]) // 2
+
+	numbers[0] = 87
+
+	fmt.Println(numbers[0]) // 87
 }
