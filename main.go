@@ -1,19 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	// "strconv"
+)
 
 func main() {
-	a := [5]int{1, 2, 3, 4, 5}
+	var workArray [10]uint8
+
+	for i := 0; i < 10; i++ {
+		var temp uint8
+		fmt.Scan(&temp)
+		workArray[i] = temp
+	}
+
+	for i := 0; i < 3; i++ {
+		var a, b int
+		fmt.Scan(&a, &b)
+		workArray[a], workArray[b] = workArray[b], workArray[a]
+	}
 	
-	for idx := range a {
-		fmt.Println(a[idx])
-	}
-
-	for idx, _ := range a {
-		fmt.Println(a[idx])
-	}
-
-	for _, elem := range a {
-		fmt.Println(elem)
+	for _, element := range workArray {
+		fmt.Printf("%v ", element)
 	}
 }
