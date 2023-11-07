@@ -2,13 +2,15 @@ package main
 import "fmt"
 
 func main() {
-	var num1 int
-	var num2 int
-	sum := 0
-	fmt.Scan(&num1, &num2)
-
-	for i := num1; i <= num2; i ++ {
-		sum += i
+	var count int
+	fmt.Scan(&count)
+	output := 0
+	for i := 0; i < count; i++ {
+		var temp int
+		fmt.Scan(&temp)
+		if (temp % 8 == 0) && (10 <= temp && temp <= 99){
+			output += temp
+		}
 	}
-	fmt.Println(sum)
+	fmt.Println(output)
 }
