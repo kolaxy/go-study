@@ -1,13 +1,12 @@
 package main
-
 import "fmt"
-
+//for [инициализация счетчика]; [условие]; [изменение счетчика]{
+    // действия
+// }
 func main() {
-	var number int
-	fmt.Scan(&number)
-	if (number % 400 == 0) || (number % 4 == 0 && number % 100 != 0) {
-		fmt.Println("YES")
-	} else {
-		fmt.Println("NO")
+	sum := 0
+	for i := 1; i < 10; i++ {
+		sum += 1
 	}
+	fmt.Println(sum)
 }
