@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-	initialUsers := []string{"Bob", "Alice", "Kate", "Sam", "Tom", "Paul", "Mike", "Robert"}
-	initialUsers = append(initialUsers, "NEW")
-	fmt.Println(initialUsers)
-}
+	a := []int{1, 2, 3, 4, 5, 6, 7}
+	a = append(a[0:2], a[3:] ...)
+	fmt.Println(a)
+	}
