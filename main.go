@@ -10,10 +10,12 @@ func main() {
 		fmt.Scan(&temp)
 		array[i] = temp
 	}
+	counter := 0
 	for i := 0; i < count; i++ {
-		if i % 2 == 0 {
-			fmt.Printf("%d ", array[i])
+		if array[i] > 0 {
+			counter += 1
 		}
 	}
+	fmt.Println(counter)
 }
 
