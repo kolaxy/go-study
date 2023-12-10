@@ -1,19 +1,12 @@
 package main
-
 import (
 	"fmt"
-	"math"
+	"strconv"
 )
 
 func main() {
-	var num int
-	fmt.Scan(&num)
-	for i := 0; i < num; i++ {
-		temp := math.Pow(2, float64(i))
-		if temp <= float64(num) {
-			fmt.Printf("%d ", int(temp))
-		} else {
-			break
-		}
-	}
+	var a int64
+	fmt.Scan(&a)
+	result := strconv.FormatInt(a, 2)
+	fmt.Println(result)
 }
