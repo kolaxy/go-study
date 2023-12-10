@@ -1,12 +1,15 @@
 package main
-import (
-	"fmt"
-	"strconv"
-)
+
+import "fmt"
 
 func main() {
-	var a int64
-	fmt.Scan(&a)
-	result := strconv.FormatInt(a, 2)
-	fmt.Println(result)
+	var num string
+	var digit string
+	fmt.Scan(&num, &digit)
+
+	for _, v := range num {
+		if string(v) != digit {
+			fmt.Printf("%c", v)
+		}
+	}
 }
