@@ -3,8 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	var num int
-	fmt.Scan(&num)
-	result := 1 + ((num - 1) % 9)
-	fmt.Print(result)
+	var a, b int
+	fmt.Scan(&a, &b)
+	var temp int
+	flag := false
+	for i := a; i <= b; i++ {
+		if i % 7 == 0 {
+			temp = i
+			flag = true
+		}
+	}
+	if flag == true {
+		fmt.Println(temp)
+	} else {
+		fmt.Println("NO")
+	}
 }
