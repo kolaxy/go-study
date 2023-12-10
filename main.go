@@ -2,9 +2,11 @@ package main
 import "fmt"
 
 func main() {
-	var number int
-	fmt.Scan(&number)
-	hours := number / 3600
-	minutes := (number - hours * 3600) / 60
-	fmt.Printf("It is %d hours %d minutes.", hours, minutes)
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+	if a*a + b*b == c*c {
+		fmt.Println("Прямоугольный")
+	} else {
+		fmt.Println("Непрямоугольный")
+	}
 }
