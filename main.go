@@ -4,9 +4,9 @@ import "fmt"
 func main() {
 	var a, b, c int
 	fmt.Scan(&a, &b, &c)
-	if a*a + b*b == c*c {
-		fmt.Println("Прямоугольный")
+	if a < b + c && b < a + c && c < a + b {
+		fmt.Printf("Существует") 
 	} else {
-		fmt.Println("Непрямоугольный")
+		fmt.Printf("Не существует")
 	}
 }
