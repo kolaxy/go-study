@@ -3,15 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(sumInt(1,2,3,4,5))
+	x1 := 1
+	x2 := 2
+	test(&x1, &x2)
 }
 
-func sumInt(a ... int) (int, int){
-	var result int
-	var count int
-	for _, i := range a {
-		result += i
-		count++
-	}
-	return count, result
+// считайте что fmt уже импортирован и main объявлен
+func test(x1 *int, x2 *int) {
+	// здесь пишите ваш код
+	temp := *x1
+	*x1 = *x2
+	*x2 = temp
+	fmt.Println(*x1, *x2)
 }
