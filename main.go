@@ -3,19 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	a := vote(1, 1 ,1)
-	fmt.Println(a)
+	fmt.Println(def(1,2,3,4,5))
 }
 
-func vote(x int, y int, z int) int {
-    if x == y || x == z {
-		return x
-	} else {
-		return y
+func def(a ... int) int{
+	var result int
+	for _, i := range a {
+		result += i
 	}
+	return result
 }
-
-
-
-
-
