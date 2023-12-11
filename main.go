@@ -3,13 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(def(1,2,3,4,5))
+	fmt.Println(sumInt(1,2,3,4,5))
 }
 
-func def(a ... int) int{
+func sumInt(a ... int) (int, int){
 	var result int
+	var count int
 	for _, i := range a {
 		result += i
+		count++
 	}
-	return result
+	return count, result
 }
