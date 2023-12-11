@@ -3,21 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	minimumFromFour()
+	a := vote(1, 1 ,1)
+	fmt.Println(a)
 }
 
-func minimumFromFour() int {
-	array := []int{}
-	for i := 0; i < 4; i++ {
-		var temp int
-		fmt.Scan(&temp)
-		array = append(array, temp)
+func vote(x int, y int, z int) int {
+    if x == y || x == z {
+		return x
+	} else {
+		return y
 	}
-	min := array[0]
-	for i := 0; i < 4; i++ {
-		if array[i] < min {
-			min = array[i]
-		}
-	}
-	return min
 }
+
+
+
+
+
