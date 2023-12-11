@@ -3,12 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	add(1, 2, 3.4, 5.6, 1.2)
+	var a = 8
+	fmt.Println("a before: ", a)
+	increment(a)
+	fmt.Println("a after: ", a)
 }
 
-func add(x, y int, a, b, c float32) {
-    var z = x + y
-    var d = a + b + c
-    fmt.Println("x + y = ", z)
-    fmt.Println("a + b + c = ", d)
+func increment(x int) {
+    fmt.Println("x before: ", x)
+	x = x + 20
+	fmt.Println("x after: ", x)
 }
