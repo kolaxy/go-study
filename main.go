@@ -1,22 +1,16 @@
 package main
 
 import (
-	// "errors"
-	"errors"
 	"fmt"
+	"math"
 )
 
-func divide(a, b int) (int, error) {
-	return a / b, nil
+func calculate(a, b float64) float64 {
+	return math.Sqrt(a*a + b*b)
 }
 
 func main() {
-	var a, b int
+	var a, b float64
 	fmt.Scan(&a, &b)
-	result, error := divide(a, b)
-	if error == nil {
-		fmt.Println(result)
-	} else {
-		fmt.Println(errors.New("ошибка"))
-	}
+	fmt.Println(calculate(a, b))
 }
