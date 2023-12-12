@@ -1,16 +1,22 @@
 package main
 
 import (
+	// "errors"
+	"errors"
 	"fmt"
-	"strings"
 )
 
+func divide(a, b int) (int, error) {
+	return a / b, nil
+}
+
 func main() {
-	var put string
-	fmt.Scan(&put)
-	for _, v := range put {
-		if strings.Count(put, string(v)) == 1 {
-			fmt.Printf("%v", string(v))
-		}
+	var a, b int
+	fmt.Scan(&a, &b)
+	result, error := divide(a, b)
+	if error == nil {
+		fmt.Println(result)
+	} else {
+		fmt.Println(errors.New("ошибка"))
 	}
 }
