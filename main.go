@@ -1,16 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	var numString string
-	var maxNumber uint8
 	fmt.Scan(&numString)
-	maxNumber = uint8(numString[0])
 	for _, v := range numString {
-		if byte(v) > maxNumber {
-			maxNumber = byte(v)
-		}
+		val, _ := strconv.Atoi(string(v))
+		res := int(val) * int(val)
+		fmt.Printf("%d", res)
 	}
-	fmt.Println(string(maxNumber))
 }
