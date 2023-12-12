@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
 	var put string
 	fmt.Scan(&put)
-	for index, v := range put {
-		if index%2 != 0 {
+	for _, v := range put {
+		if strings.Count(put, string(v)) == 1 {
 			fmt.Printf("%v", string(v))
 		}
 	}
