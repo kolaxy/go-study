@@ -1,19 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var index int8 = 15
-	var bigIndex int32
-	bigIndex = int32(index)
+	var a string
+	fmt.Scan(&a)
 
-	fmt.Println(bigIndex)
-	fmt.Printf("%T \n", bigIndex)
+	if isValidPassword(a) {
+		fmt.Println("Ok")
+	} else {
+		fmt.Println("Wrong password")
+	}
+}
 
-	var a int32 = 22
-	var b uint64
-	b = uint64(a)
+func isValidPassword(a string) bool {
+	for _, symb := range a {
+		if !isLatinLetterOrDigit(symb) {
+			return false
+		}
+	}
+	return len(a) >= 5
+}
 
-	fmt.Println(b)
-	fmt.Printf("%T \n", b)
+func isLatinLetterOrDigit(s rune) bool {
+	return (s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z') || (s >= '0' && s <= '9')
 }
